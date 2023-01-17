@@ -1,5 +1,39 @@
 const { Schema, model, Types } = require("mongoose");
-const Reaction = require("./Reaction");
+
+//Originally had a full model for reactionSchema, but had to change it to a subdocument
+//https://mongoosejs.com/docs/subdocs.html
+const reactionSchema = new Schema(
+  {
+    reactionId: {
+      type: Schema.Types.ObjectId,
+      //Default value is set to a new ObjectId
+      default: () => new Types.ObjectId(),
+    },
+
+    reactionBody: {
+      type: String,
+      required: true,
+      maxlength: 280,
+    },
+
+    username: {
+      type: String,
+      required: true,
+    },
+
+    createdAt: {
+      type: Date,
+      default: Date.now,
+      get: (timestamp),
+    },
+  },
+  {
+    toJSON: {
+      getters: true,
+    },
+    id: false,
+  }
+);
 
 //Schema to create a new thought model
 const thoughtSchema = new Schema(
@@ -23,7 +57,7 @@ const thoughtSchema = new Schema(
         },
 
       reactions: [
-       Reaction
+       reactionSchema
       ],
 
     },
