@@ -24,20 +24,24 @@ Before you begin make sure that you clone the github repo ``git clone repo`` wit
 ## USAGE/INSTRUCTIONS:
 
 1. You can begin by opening two seperate CLI terminals. Within the first terminal enter ``npm install`` <br/>
-
+<img width="1384" alt="install command for the CLI" src="https://user-images.githubusercontent.com/107738986/213079834-68b36593-e7ad-4cc1-ad02-11b6a489fb09.png">
 
 2. Within the secondary CLI enter ``mongod`` or ``mongosh`` (depending on the version you have) to get the server ready <br/> 
-
+<img width="1384" alt="install command for the CLI" src="https://user-images.githubusercontent.com/107738986/213079905-023a3e56-23dc-4c28-a606-79c6e4e7a761.png">
 
 3. Next go to your mongoDB compass and press the connect button <br/> 
-
+<img width="1384" alt="install command for the CLI" src="https://user-images.githubusercontent.com/107738986/213079947-a7717bbd-040c-4800-8835-f97a1150f6b7.png">
 
 4. Finally come back to the CLI and enter ``npm start``. This will run the index.js file and connect to the mongoDB server. Now you are ready to check out the routes on insomnia. <br/>
- 
+ <img width="1384" alt="install command for the CLI" src="https://user-images.githubusercontent.com/107738986/213080012-11f3636c-d5c1-431f-81a4-2c13ebf8e73e.png">
  
 5. Check out the video walkthrough below to see the insomnia route testing: <br/>
 
 https://youtu.be/4ae8HL6q1oQ
+
+
+
+
 
 
 
