@@ -19,11 +19,25 @@ This is an API for a social network web app where users can share their thoughts
 
 ## INSTALLATION:
 
-After you clone the repo run npm install within your node js and you will have all of the dependencies needed.
+Before you begin make sure that you clone the github repo ``git clone repo`` with the SSH key. Also make sure to have mongoDB/compass on your machine.
 
 ## USAGE/INSTRUCTIONS:
 
-1. npm install, 2. npm run seed, 3. node server.js, here is a video below: <br/>
+1. You can begin by opening two seperate CLI terminals. Within the first terminal enter ``npm install`` <br/>
+
+
+2. Within the secondary CLI enter ``mongod`` or ``mongosh`` (depending on the version you have) to get the server ready <br/> 
+
+
+3. Next go to your mongoDB compass and press the connect button <br/> 
+
+
+4. Finally come back to the CLI and enter ``npm start``. This will run the index.js file and connect to the mongoDB server. Now you are ready to check out the routes on insomnia. <br/>
+ 
+ 
+5. Check out the video walkthrough below to see the insomnia route testing: <br/>
+
+https://youtu.be/4ae8HL6q1oQ
 
 
 
