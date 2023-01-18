@@ -9,6 +9,10 @@
       "dev": "nodemon index",
       "seed": "node utils/seed"
     },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Huntken26/social-network-api"
+    },
     "dependencies": {
       "express": "^4.17.1",
       "mongoose": "^6.0.13"

@@ -24,7 +24,7 @@ const reactionSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      get: (timestamp),
+      timestamps: true,
     },
   },
   {
@@ -46,8 +46,7 @@ const thoughtSchema = new Schema(
       createdAt: {
         type: Date,
         default: Date.now,
-        timestamps: true,
-        get: (timestamp),
+        get: timestamp => timestamp
       },
 
       username:
@@ -70,10 +69,10 @@ const thoughtSchema = new Schema(
     } 
     );
 
-    //Created a virtual which retrieves the length of the friends upon 'get' method query
+    //Created a virtual which retrieves the length of the reactions upon 'get' method query
     //got virtual/mongoose help from https://mongoosejs.com/docs/guide.html#virtuals
-    thoughtSchema.virtual("friendCount").get(function () {
-        return this.friends.length;
+    thoughtSchema.virtual("reactionCount").get(function () {
+        return this.reactions.length;
       });
       
       const Thought = model("Thought", thoughtSchema);

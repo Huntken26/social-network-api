@@ -1,12 +1,13 @@
-const { User, Thought } = require("../models");
+const { Thought, User } = require("../models");
 //Utilized/customized the controllers file from the class activity- 28-mini-project U of M
 
 
 module.exports = {
     getThoughts(req, res) {
+        console.log(req);
         Thought.find()
-          .then((thoughtdata) => res.json(thoughtdata))
-          .catch((err) => res.status(500).json(err));
+          .then((thought) => res.json(thought))
+          .catch((err) => {console.log(err); res.status(500).json(err)});
       },
 
       // Get a thought
@@ -57,28 +58,6 @@ module.exports = {
           .catch((err) => res.status(500).json(err));
       },
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
